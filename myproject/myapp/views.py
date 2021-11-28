@@ -3,4 +3,8 @@ from django.http import HttpResponse
 # Create your views here.
 def test_view(request):
     print("request:" , request )
-    return render(request , "test.html")
+    name = "mohammad"
+    c = {}
+    c["z"] = name 
+    c["age"] = 29
+    return render(request , "test.html" ,c )
