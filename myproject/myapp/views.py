@@ -7,4 +7,6 @@ def test_view(request):
     c = {}
     c["z"] = name 
     c["age"] = 29
+    c["major"] = "MIS"
+    c["majors"] = ["MIS" , "accounting" , "finance" , "management"]
     return render(request , "test.html" ,c )

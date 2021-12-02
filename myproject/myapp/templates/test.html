@@ -1,7 +1,14 @@
 <HTML>
     <head></head>
     <body>
-    hello {{z}} <br />
+    <h1>hello {{z}} </h1>
     this is our first
+    <p>this is your major {{major}} </p>
+    <p> the majors in CBA are {{majors}} </p>
+    <ul>
+    {% for x in majors %}
+    <li>{{x}}</li>
+    {% endfor %}
+    </ul>
     </body>
     </HTML>
