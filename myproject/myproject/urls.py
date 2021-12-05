@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import test_view
+from myapp.views import test_view , greet_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/' , test_view )
+    path('test/' , test_view ),
+    path('greet/<str:u>/', greet_view),
+    path('greet/<str:u>/<int:a>/', greet_view),
+
 ]

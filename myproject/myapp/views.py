@@ -10,3 +10,9 @@ def test_view(request):
     c["major"] = "MIS"
     c["majors"] = ["MIS" , "accounting" , "finance" , "management"]
     return render(request , "test.html" ,c )
+def greet_view(request , u=None , a=None):
+    p = {
+        "username" : u, 
+        "age" : a
+    }
+    return render(request , "greet2.html", context=p)
